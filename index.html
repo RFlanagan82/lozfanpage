@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
@@ -71,7 +72,7 @@
     <br />
 
     <div class="container fluid gamecontainer">
-      <div id="gameSearch" class="hide">
+      <div id="gameSearch" class="">
         <div class="innercontainer fluid">
           <div class="row">
             <aside class="col-sm-4 bg-light game-index">
@@ -83,12 +84,12 @@
               >
                 <input class="form-control" type="text" id="gameinput" />
                 <!--Button triggers game to be searched-->
-                <button class="searchBtn btn btn-primary">
+                <button class="searchBtn1 btn btn-primary">
                   <i class="fas fa-search"></i>
                 </button>
               </form>
             </aside>
-            <div class="col-sm-8 border game-info">
+            <div class="col-sm-8 border" id="gameInfo">
               <h3 class="gameName"></h3>
               <p class="description"></p>
               <p class="developer"></p>
