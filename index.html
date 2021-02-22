@@ -11,11 +11,12 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-   <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-        crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -27,64 +28,77 @@
         </p>
       </div>
     </div>
-    <br>
-      <div class="container fluid welcome">
-          <div class="inner-container">
-              <div class="row">
-                  <div class="col-sm-12 text-center">
-                      <h4 class>Welcome Fellow Hylian!</h4>
-                      <b>"It is dangerous to go alone...Take this!"</b>
-                      <p>This site is created for those who wish to learn more about the Legend of Zelda Universe.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-    <br>
-      <div class="container fluid selectbar">
+    <br />
+    <div class="container fluid welcome">
+      <div class="inner-container">
         <div class="row">
-          <aside class="col-sm-9 bg-light resource-select">
-            <h4>What do you want to learn more about?</h4>
-            <!--This form will be where users input resource selection-->
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Click the dropdown to choose a search category.</option>
-              <option value="1">Games</option>
-              <option value="2">Characters</option>
-              <option value="3">Monsters</option>
-              <option value="4">Bosses</option>
-              <option value="5">Dungeons</option>
-            </select>
-             <!--Button triggers selected category to be searched-->
-          </aside>
-          <div class="col-sm-3">
-                <button class ="searchBtn btn btn-success btn-lg">
-                <i class="fas fa-check-circle"> Select</i> 
-            </button>
+          <div class="col-sm-12 text-center">
+            <h4 class>Welcome Fellow Hylian!</h4>
+            <b>"It is dangerous to go alone...Take this!"</b>
+            <p>
+              This site is created for those who wish to learn more about the
+              Legend of Zelda Universe.
+            </p>
           </div>
         </div>
       </div>
-      <br>
-      <div class="container fluid gamecontainer">
-          <div class="row" id="game">
-              <aside class="col-sm-4 bg-light game-index">
-                  <h4>Search for a Zelda Game:</h4>
-                   <form class="form-inline form-group" id="game-form" style="width:85%">
-                        <input class="form-control" type="text" id="gameinput">
-                        <!--Button triggers game to be searched-->
-                        <button class ="searchBtn btn btn-primary" >
-                            <i class="fas fa-search"></i> 
-                        </button>
-                    </form>
-              </aside>
-              <br>
-              <div class="col-sm-8 border game-info">
-                  <h3 class="gameName"></h3>
-                  <p class="description"></p>
-                  <p class="developer"></p>
-                  <p class= "publisher"></p>
-                  <p class="released_date"></p>
-              </div>
-          </div>
+    </div>
+    <br />
+    <div class="container fluid selectbar">
+      <div class="row">
+        <aside class="col-sm-9 bg-light resource-select">
+          <h4>What do you want to learn more about?</h4>
+          <!--This form will be where users input resource selection-->
+          <select class="form-select" aria-label="Default select example">
+            <option selected>
+              Click the dropdown to choose a search category.
+            </option>
+            <option value="1">Games</option>
+            <option value="2">Characters</option>
+            <option value="3">Monsters</option>
+            <option value="4">Bosses</option>
+            <option value="5">Dungeons</option>
+          </select>
+          <!--Button triggers selected category to be searched-->
+        </aside>
+        <div class="col-sm-3 selectBtn">
+          <button class="searchBtn btn btn-success btn-lg" id="categorySelectBtn">
+            <i class="fas fa-check-circle"> Select</i>
+          </button>
+        </div>
       </div>
+    </div>
+    <br />
+
+    <div class="container fluid gamecontainer">
+      <div id="gameSearch" class="hide">
+        <div class="innercontainer fluid">
+          <div class="row">
+            <aside class="col-sm-4 bg-light game-index">
+              <h4>Search for a Zelda Game:</h4>
+              <form
+                class="form-inline form-group"
+                id="game-form"
+                style="width: 85%"
+              >
+                <input class="form-control" type="text" id="gameinput" />
+                <!--Button triggers game to be searched-->
+                <button class="searchBtn btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </aside>
+            <div class="col-sm-8 border game-info">
+              <h3 class="gameName"></h3>
+              <p class="description"></p>
+              <p class="developer"></p>
+              <p class="publisher"></p>
+              <p class="released_date"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
