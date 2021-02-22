@@ -1,41 +1,40 @@
+// create a function for searching zelda games
 function searchGame() {
-    const gameInput = $("#gameinput").val();
-    console.log(gameInput);
+  const gameInput = $("#gameinput").val();
+  console.log(gameInput);
 
-    //Here is where I set up the URL to query the LOZ API site
-    const gameQueryURL = "https://zelda-api.apius.cc/api/games?name=" + gameInput;
+  //Here is where I set up the URL to query the LOZ API site
+  const gameQueryURL = "https://zelda-api.apius.cc/api/games?name=" + gameInput;
 
-    $.ajax({
-        url: gameQueryURL,
-        method: "GET"
-    }).then(function (response) {
-        console.log(response);
+  $.ajax({
+    url: gameQueryURL,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
 
-        const gameNameEl = $(".gameName").text("Name: " + response.data.name);
+    const gameNameEl = $(".gameName").text("Name: " + response.data[0].name);
 
-        const descriptionEl = $(".description").text("Description: " + response.data.description);
+    const descriptionEl = $(".description").text(
+      "Description: " + response.data[0].description
+    );
 
-        const developerEl = $(".developer").text("Developer: " + response.data.developer);
+    const developerEl = $(".developer").text(
+      "Developer: " + response.data[0].developer
+    );
 
-        const publisherEl = $(".publisher").text("Publisher: " + response.data.publisher);
+    const publisherEl = $(".publisher").text(
+      "Publisher: " + response.data[0].publisher
+    );
 
-        const released_dateEl = $(".released_date").text("Released Date: " + response.data.released_date);
-
-        // gameName.append(gameNameEl)
-        // description.append(descriptionEl);
-        // developer.append(developerEl);
-        // publisher.append(publisherEl);
-        // released_date.append(released_dateEl);
-
-    // }).catch(error => {
-    //     console.log(error);
-    })
-};
+    const released_dateEl = $(".released_date").text(
+      "Released Date: " + response.data[0].released_date
+    );
+  });
+}
 
 // Create add event listener for game search button when clicked
 
 $(".searchBtn1").on("click", function (event) {
-    event.preventDefault();
-    searchGame();
+  event.preventDefault();
+  searchGame();
 });
-
