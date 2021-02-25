@@ -45,7 +45,8 @@ function searchCharacter() {
   console.log(characterInput);
 
   const characterQueryURL =
-    "https://zelda-api.apius.cc/api/characters?name=" + characterInput;
+      "https://zelda-api.apius.cc/api/characters?name=" + characterInput;
+    console.log(characterQueryURL);
 
   $.ajax({
     url: characterQueryURL,
@@ -53,7 +54,7 @@ function searchCharacter() {
   }).then(function (response) {
       console.log(response);
       $("#characterInfoView").empty();
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < response.length; i++) {
           console.log(data[i]);
           
         //   const dataItem = data[i];
